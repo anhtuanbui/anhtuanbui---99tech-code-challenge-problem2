@@ -1,6 +1,7 @@
 {
   "name": "problem2",
   "version": "0.1.0",
+  "homepage": "https://anhtuanbui.github.io/anhtuanbui---99tech-code-challenge-problem2/",
   "private": true,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
