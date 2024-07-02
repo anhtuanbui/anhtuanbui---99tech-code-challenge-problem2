@@ -1,8 +1,8 @@
 {
   "name": "problem2",
   "version": "0.1.0",
+  "private": true,
   "homepage": "https://anhtuanbui.github.io/anhtuanbui---99tech-code-challenge-problem2/",
-  "private": false,
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.11.4",
@@ -12,6 +12,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -21,9 +22,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && move build docs",
+    "build": "rmdir /s /q docs 2>nul && react-scripts build && move build docs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
