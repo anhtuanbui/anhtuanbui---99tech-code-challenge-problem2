@@ -6,6 +6,8 @@ import {
   CircularProgress,
 } from "@mui/material";
 
+import "./Form.scss";
+
 function Form() {
   const API_URL = "https://interview.switcheo.com/prices.json";
   const [data, setData] = useState();
@@ -114,7 +116,7 @@ function Form() {
 
   return (
     <form className="form" onSubmit={onSubmit}>
-      <h4>Swap from USD</h4>
+      <h4 className="title">Swap from USD</h4>
 
       <TextField
         label="Amount to send"
@@ -163,6 +165,7 @@ function Form() {
       <Button
         variant="contained"
         type="submit"
+        sx={{ width: 300 }}
         disabled={isLoading}
         startIcon={isLoading ? <CircularProgress size={20} /> : null}
       >
